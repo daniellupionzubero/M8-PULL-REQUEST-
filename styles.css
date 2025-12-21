@@ -1,53 +1,144 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.add-task {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-input[type="text"] {
-    width: 60%;
-    padding: 8px;
-    font-size: 16px;
-}
-
-button {
-    padding: 8px 12px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.tasks ul {
-    list-style-type: none;
+/* =========================
+   RESET BÁSICO
+   ========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
 }
 
-.tasks li {
-    padding: 10px;
-    margin-bottom: 5px;
-    background-color: #fff;
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 30px;
+    color: #333;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ========================= */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   FORMULARIO
+   ========================= */
+.add-task {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+button {
+    padding: 12px 16px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Botón añadir */
+#todo-form button {
+    background-color: #667eea;
+    color: #fff;
+}
+
+#todo-form button:hover {
+    background-color: #5a67d8;
+}
+
+/* Botón borrar todo */
+#clear-all {
+    background-color: #e53e3e;
+    color: #fff;
+}
+
+#clear-all:hover {
+    background-color: #c53030;
+}
+
+/* Botón ordenar */
+#sort {
+    background-color: #38a169;
+    color: #fff;
+}
+
+#sort:hover {
+    background-color: #2f855a;
+}
+
+/* =========================
+   LISTA DE TAREAS
+   ========================= */
+.tasks {
+    margin-top: 20px;
+}
+
+.tasks ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.tasks li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s;
-}
-
-.tasks li.completed {
-    text-decoration: line-through;
-    color: #888;
-    background-color: #e0ffe0;
-}
-
-button:hover {
-    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, box-sha
 }
